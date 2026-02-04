@@ -1,0 +1,60 @@
+@page
+@model WebApp.Pages_TeamStandings.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TeamStanding</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.Wins" class="control-label"></label>
+                <input asp-for="TeamStanding.Wins" class="form-control" />
+                <span asp-validation-for="TeamStanding.Wins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.Draws" class="control-label"></label>
+                <input asp-for="TeamStanding.Draws" class="form-control" />
+                <span asp-validation-for="TeamStanding.Draws" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.Losses" class="control-label"></label>
+                <input asp-for="TeamStanding.Losses" class="form-control" />
+                <span asp-validation-for="TeamStanding.Losses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.GoalsFor" class="control-label"></label>
+                <input asp-for="TeamStanding.GoalsFor" class="form-control" />
+                <span asp-validation-for="TeamStanding.GoalsFor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.GoalsAgainst" class="control-label"></label>
+                <input asp-for="TeamStanding.GoalsAgainst" class="form-control" />
+                <span asp-validation-for="TeamStanding.GoalsAgainst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamStanding.FairPlayPoints" class="control-label"></label>
+                <input asp-for="TeamStanding.FairPlayPoints" class="form-control" />
+                <span asp-validation-for="TeamStanding.FairPlayPoints" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="TeamStanding.Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

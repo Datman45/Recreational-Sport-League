@@ -1,0 +1,121 @@
+@page
+@model WebApp.Pages_Matches.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Matches</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].HomeTeam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].AwayTeam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].Referee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].HomeTeamGoals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].AwayTeamGoals)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].HomeTeamYellowCards)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].AwayTeamYellowCards)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].HomeTeamRedCards)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].AwayTeamRedCards)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Match[0].OriginalDate)
+            </th>
+            @if (Model.Match.Count > 0)
+            {
+                @if (Model.Match[0].IsRescheduled)
+                {
+                    <th>
+                        @Html.DisplayNameFor(model => model.Match[0].IsRescheduled)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Match[0].RescheduleReason)
+                    </th>
+                }
+            }
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Match) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwayTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Referee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeamGoals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwayTeamGoals)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeamYellowCards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwayTeamYellowCards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeTeamRedCards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AwayTeamRedCards)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OriginalDate)
+            </td> 
+            @if (item.IsRescheduled) {
+                <td>
+                    <form method="post" asp-page-handler="ToggleRescheduled">
+                        <input type="hidden" name="id" value="@item.Id"/>
+                        <input type="checkbox"
+                               name="IsRescheduled"
+                               value="true"
+                               @(item.IsRescheduled ? "checked" : "")
+                               onchange="this.form.submit()"/>
+                    </form>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RescheduleReason)
+                </td>
+            }
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,66 @@
+@page
+@model WebApp.Pages_Teams.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Teams</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form method="get">
+    <input type="hidden" name="currentPage" value="@Model.CurrentPage"/>
+    <input type="text" name="SearchString" placeholder="Search by Team Name"/>
+    <input type="submit"/>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Teams[0].Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teams[0].HasLights)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teams[0].HomeField)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Teams) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <form method="post" asp-page-handler="ToggleLights">
+                    <input type="hidden" name="id" value="@item.Id"/>
+                    <input type="checkbox" name="lights" value="true" @(item.HasLights ? "checked" : "") onchange="this.form.submit()"/>
+                </form>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeField)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div>
+    <ul class="pagination">
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a asp-page="./Index" asp-route-currentPage="@i" asp-route-SearchString="@Model.SearchString" class="page-link">@i</a>
+            </li>
+        }
+    </ul>
+</div>

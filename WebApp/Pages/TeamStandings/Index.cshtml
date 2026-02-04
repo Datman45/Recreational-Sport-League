@@ -1,0 +1,105 @@
+@page
+@model WebApp.Pages_TeamStandings.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Team Standings</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form method="get">
+    <input type="hidden" name="currentPage" value="@Model.CurrentPage"/>
+    <input type="text" name="SearchString" placeholder="Search by Team Name"/>
+    <input type="submit"/>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].SeasonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].TeamName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].Wins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].Draws)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].Losses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].GoalsFor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].GoalsAgainst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].GoalsDifference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].Points)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamStandings[0].FairPlayPoints)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.TeamStandings) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeasonName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wins)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Draws)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Losses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoalsFor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GoalsAgainst)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.GoalsDifference)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Points)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FairPlayPoints)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<div>
+    <ul class="pagination">
+        @for (var i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a asp-page="./Index" asp-route-currentPage="@i" asp-route-SearchString="@Model.SearchString" class="page-link">@i</a>
+            </li>
+        }
+    </ul>
+</div>

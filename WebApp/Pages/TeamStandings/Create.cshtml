@@ -1,0 +1,40 @@
+@page
+@model WebApp.Pages_TeamStandings.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>TeamStanding</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text-danger"> 
+                @Model.ErrorMessage
+            </div>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="TeamStanding.TeamName" class="control-label"></label>
+                    <select asp-for="TeamStanding.TeamId" asp-items="@Model.Teams" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeamStanding.SeasonName" class="control-label"></label>
+                    <select asp-for="TeamStanding.SeasonId" asp-items="@Model.Seasons" class="form-control"></select>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                </div>
+            </form>
+        </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

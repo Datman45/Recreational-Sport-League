@@ -1,0 +1,46 @@
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\bin\Debug\net10.0\DAL.deps.json
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\bin\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\bin\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.csproj.AssemblyReference.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.AssemblyInfoInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.AssemblyInfo.cs
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\refint\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\connect-4\Exam\DAL\obj\Debug\net10.0\ref\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\DAL.deps.json
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.csproj.AssemblyReference.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.AssemblyInfoInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.AssemblyInfo.cs
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\refint\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\ref\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\Domain.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\Domain.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.csproj.Up2Date
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\bin\Debug\net10.0\DAL.runtimeconfig.json
+C:\Users\jaros\RiderProjects\icd0008-25f\Exam\DAL\obj\Debug\net10.0\DAL.genruntimeconfig.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\DAL.deps.json
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\DAL.runtimeconfig.json
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\Domain.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\bin\Debug\net10.0\Domain.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.csproj.AssemblyReference.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.AssemblyInfoInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.AssemblyInfo.cs
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.csproj.Up2Date
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\refint\DAL.dll
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.pdb
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\DAL.genruntimeconfig.cache
+C:\Users\jaros\RiderProjects\icd0008-25f\Recreational Sport League\DAL\obj\Debug\net10.0\ref\DAL.dll

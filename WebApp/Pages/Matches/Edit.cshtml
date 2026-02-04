@@ -1,0 +1,95 @@
+@page
+@model WebApp.Pages_Matches.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Match</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Match.HomeTeam" class="control-label"></label>
+                <select asp-for="Match.HomeTeamId" class="form-control" asp-items="@Model.HomeTeamList"></select>
+                <span asp-validation-for="Match.HomeTeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.AwayTeam" class="control-label"></label>
+                <select asp-for="Match.AwayTeamId" class="form-control" asp-items="@Model.AwayTeamList"></select>
+                <span asp-validation-for="Match.AwayTeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Season" class="control-label"></label>
+                <select asp-for="Match.SeasonId" class="form-control" asp-items="@Model.SeasonsList"></select>
+                <span asp-validation-for="Match.SeasonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.Referee" class="control-label"></label>
+                <select asp-for="Match.RefereeId" class="form-control" asp-items="@Model.RefereesList"></select>
+                <span asp-validation-for="Match.RefereeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.HomeTeamGoals" class="control-label"></label>
+                <input asp-for="Match.HomeTeamGoals" class="form-control" />
+                <span asp-validation-for="Match.HomeTeamGoals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.AwayTeamGoals" class="control-label"></label>
+                <input asp-for="Match.AwayTeamGoals" class="form-control" />
+                <span asp-validation-for="Match.AwayTeamGoals" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.HomeTeamYellowCards" class="control-label"></label>
+                <input asp-for="Match.HomeTeamYellowCards" class="form-control" />
+                <span asp-validation-for="Match.HomeTeamYellowCards" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.AwayTeamYellowCards" class="control-label"></label>
+                <input asp-for="Match.AwayTeamYellowCards" class="form-control" />
+                <span asp-validation-for="Match.AwayTeamYellowCards" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.HomeTeamRedCards" class="control-label"></label>
+                <input asp-for="Match.HomeTeamRedCards" class="form-control" />
+                <span asp-validation-for="Match.HomeTeamRedCards" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.AwayTeamRedCards" class="control-label"></label>
+                <input asp-for="Match.AwayTeamRedCards" class="form-control" />
+                <span asp-validation-for="Match.AwayTeamRedCards" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.OriginalDate" class="control-label"></label>
+                <input asp-for="Match.OriginalDate" class="form-control" />
+                <span asp-validation-for="Match.OriginalDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Match.IsRescheduled" /> @Html.DisplayNameFor(model => model.Match.IsRescheduled)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Match.RescheduleReason" class="control-label"></label>
+                <input asp-for="Match.RescheduleReason" class="form-control" />
+                <span asp-validation-for="Match.RescheduleReason" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Match.Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
